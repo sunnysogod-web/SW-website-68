@@ -106,9 +106,12 @@
     .status-rejected { background: linear-gradient(135deg, #f87171 0%, #ef4444 100%); }
   </style>
   <style>@view-transition { navigation: auto; }</style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 school-pattern overflow-auto">
-  <div id="app" class="min-h-full w-full"><!-- Decorative Elements -->
+  <div id="app" class="min-h-full w-full">
+   <!-- Decorative Elements -->
    <div class="fixed top-10 left-10 text-6xl float-animation opacity-60 pointer-events-none z-0">
     🌳
    </div>
@@ -130,26 +133,31 @@
    <div id="loginPage" class="min-h-full w-full flex items-center justify-center p-4 relative z-10">
     <div class="w-full max-w-md">
      <div class="gradient-border cute-shadow">
-      <div class="p-8"><!-- Cute Student Character -->
+      <div class="p-8">
+       <!-- Cute Student Character -->
        <div class="text-center mb-6">
         <div class="text-8xl mb-2 float-animation">
          👨‍🎓
         </div>
-        <div class="flex justify-center gap-2 text-2xl"><span class="wiggle-animation" style="animation-delay: 0.1s;">🎒</span> <span class="bounce-animation" style="animation-delay: 0.2s;">✏️</span> <span class="wiggle-animation" style="animation-delay: 0.3s;">📖</span>
+        <div class="flex justify-center gap-2 text-2xl">
+         <span class="wiggle-animation" style="animation-delay: 0.1s;">🎒</span> <span class="bounce-animation" style="animation-delay: 0.2s;">✏️</span> <span class="wiggle-animation" style="animation-delay: 0.3s;">📖</span>
         </div>
        </div>
        <h1 id="schoolNameDisplay" class="text-2xl font-bold text-center bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">ระบบลากลับบ้าน</h1>
        <p class="text-gray-500 text-center mb-6 text-sm">🏫 สำหรับนักเรียน - กรุณาเข้าสู่ระบบ</p>
        <div class="space-y-4">
-        <div><label class="block text-sm font-medium text-gray-700 mb-1"> 🎫 เลขประจำตัวนักเรียน </label> <input type="text" id="studentIdInput" placeholder="เช่น 12345" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
+        <div>
+         <label class="block text-sm font-medium text-gray-700 mb-1"> 🎫 เลขประจำตัวนักเรียน </label> <input type="text" id="studentIdInput" placeholder="เช่น 12345" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
         </div>
-        <div><label class="block text-sm font-medium text-gray-700 mb-1"> 🪪 เลขประจำตัวประชาชน (4 ตัวท้าย) </label> <input type="password" id="nationalIdInput" placeholder="เช่น 1234" maxlength="4" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
+        <div>
+         <label class="block text-sm font-medium text-gray-700 mb-1"> 🪪 เลขประจำตัวประชาชน (4 ตัวท้าย) </label> <input type="password" id="nationalIdInput" placeholder="เช่น 1234" maxlength="4" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
         </div><button onclick="studentLogin()" class="w-full py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-blue-600 transform hover:scale-[1.02] transition-all shadow-lg"> 🚀 เข้าสู่ระบบ </button>
         <div class="relative my-4">
          <div class="absolute inset-0 flex items-center">
           <div class="w-full border-t border-gray-200"></div>
          </div>
-         <div class="relative flex justify-center text-sm"><span class="px-4 bg-white text-gray-400">หรือ</span>
+         <div class="relative flex justify-center text-sm">
+          <span class="px-4 bg-white text-gray-400">หรือ</span>
          </div>
         </div><button onclick="showTeacherLogin()" class="w-full py-3 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-xl font-semibold hover:from-green-600 hover:to-teal-600 transform hover:scale-[1.02] transition-all shadow-lg"> 👨‍🏫 เข้าสู่ระบบสำหรับครู </button>
        </div>
@@ -168,15 +176,18 @@
         <div class="text-8xl mb-2 float-animation">
          👨‍🏫
         </div>
-        <div class="flex justify-center gap-2 text-2xl"><span class="wiggle-animation">📋</span> <span class="bounce-animation">✅</span> <span class="wiggle-animation">📊</span>
+        <div class="flex justify-center gap-2 text-2xl">
+         <span class="wiggle-animation">📋</span> <span class="bounce-animation">✅</span> <span class="wiggle-animation">📊</span>
         </div>
        </div>
-       <h1 class="text-2xl font-bold text-center bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent mb-2">ระบบหลังบ้าน</h1>
-       <p class="text-gray-500 text-center mb-6 text-sm">🏫 สำหรับครูและบุคลาก�����</p>
+       <h1 class="text-2xl font-bold text-center bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent mb-2">ระบบหลัง��้าน</h1>
+       <p class="text-gray-500 text-center mb-6 text-sm">🏫 สำหรับครูและบุคลาก������</p>
        <div class="space-y-4">
-        <div><label class="block text-sm font-medium text-gray-700 mb-1"> 👤 ชื่อผู้ใช้ </label> <input type="text" id="teacherUsername" placeholder="username" class="w-full px-4 py-3 border-2 border-green-100 rounded-xl focus:border-green-400 transition-all">
+        <div>
+         <label class="block text-sm font-medium text-gray-700 mb-1"> 👤 ชื่อผู้ใช้ </label> <input type="text" id="teacherUsername" placeholder="username" class="w-full px-4 py-3 border-2 border-green-100 rounded-xl focus:border-green-400 transition-all">
         </div>
-        <div><label class="block text-sm font-medium text-gray-700 mb-1"> 🔑 รหัสผ่าน </label> <input type="password" id="teacherPassword" placeholder="password" class="w-full px-4 py-3 border-2 border-green-100 rounded-xl focus:border-green-400 transition-all">
+        <div>
+         <label class="block text-sm font-medium text-gray-700 mb-1"> 🔑 รหัสผ่าน </label> <input type="password" id="teacherPassword" placeholder="password" class="w-full px-4 py-3 border-2 border-green-100 rounded-xl focus:border-green-400 transition-all">
         </div><button onclick="teacherLogin()" class="w-full py-3 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-xl font-semibold hover:from-green-600 hover:to-teal-600 transform hover:scale-[1.02] transition-all shadow-lg"> 🔓 เข้าสู่ระบบ </button> <button onclick="showStudentLogin()" class="w-full py-2 text-gray-500 hover:text-gray-700 transition-all"> ← กลับหน้านักเรียน </button>
        </div>
        <div id="teacherLoginError" class="mt-4 p-3 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm hidden">
@@ -190,7 +201,8 @@
     </div>
    </div><!-- Student Dashboard -->
    <div id="studentDashboard" class="min-h-full w-full p-4 relative z-10 hidden">
-    <div class="max-w-2xl mx-auto"><!-- Header -->
+    <div class="max-w-2xl mx-auto">
+     <!-- Header -->
      <div class="glass-card rounded-2xl p-4 mb-4 cute-shadow">
       <div class="flex items-center justify-between">
        <div class="flex items-center gap-3">
@@ -205,41 +217,55 @@
       </div>
      </div><!-- Tabs -->
      <div class="glass-card rounded-2xl p-2 mb-4 cute-shadow">
-      <div class="flex gap-2"><button onclick="showStudentTab('request')" id="tabRequest" class="flex-1 py-3 px-4 rounded-xl font-medium transition-all bg-gradient-to-r from-purple-500 to-blue-500 text-white"> 📝 ขอลากลับบ้าน </button> <button onclick="showStudentTab('history')" id="tabHistory" class="flex-1 py-3 px-4 rounded-xl font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200"> 📋 ประวัติการขอ </button>
+      <div class="flex gap-2">
+       <button onclick="showStudentTab('request')" id="tabRequest" class="flex-1 py-3 px-4 rounded-xl font-medium transition-all bg-gradient-to-r from-purple-500 to-blue-500 text-white"> 📝 ขอลากลับบ้าน </button> <button onclick="showStudentTab('history')" id="tabHistory" class="flex-1 py-3 px-4 rounded-xl font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200"> 📋 ประ��ัติการขอ </button>
       </div>
      </div><!-- Request Form -->
      <div id="requestForm" class="glass-card rounded-2xl p-6 cute-shadow">
-      <div class="flex items-center gap-2 mb-6"><span class="text-3xl wiggle-animation">📝</span>
+      <div class="flex items-center gap-2 mb-6">
+       <span class="text-3xl wiggle-animation">📝</span>
        <h2 class="text-xl font-bold text-gray-800">แบบฟอร์มขอลากลับบ้าน</h2>
       </div>
       <div class="space-y-4">
        <div class="grid grid-cols-2 gap-4">
-        <div><label class="block text-sm font-medium text-gray-700 mb-1">👤 ชื่อ-สกุล</label> <input type="text" id="formName" placeholder="ชื่อ นามสกุล" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
+        <div>
+         <label class="block text-sm font-medium text-gray-700 mb-1">👤 ชื่อ-สกุล</label> <input type="text" id="formName" placeholder="ชื่อ นามสกุล" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
         </div>
-        <div><label class="block text-sm font-medium text-gray-700 mb-1">🏫 ห้องเรียน</label> <input type="text" id="formClass" placeholder="เช่น ม.3/1" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
+        <div>
+         <label class="block text-sm font-medium text-gray-700 mb-1">🏫 ห้องเรียน</label> <input type="text" id="formClass" placeholder="เช่น ม.3/1" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
         </div>
        </div>
        <div class="grid grid-cols-2 gap-4">
-        <div><label class="block text-sm font-medium text-gray-700 mb-1">📅 วันที่ลา</label> <input type="date" id="formDate" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
+        <div>
+         <label class="block text-sm font-medium text-gray-700 mb-1">📅 วันที่ลา</label> <input type="date" id="formDate" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
         </div>
-        <div><label class="block text-sm font-medium text-gray-700 mb-1">🕐 เวลาออก</label> <input type="time" id="formTimeOut" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
+        <div>
+         <label class="block text-sm font-medium text-gray-700 mb-1">🕐 เวลาออก</label> <input type="time" id="formTimeOut" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
         </div>
        </div>
-       <div><label class="block text-sm font-medium text-gray-700 mb-1">🕐 เวลากลับ (ถ้ากลับมา)</label> <input type="time" id="formTimeReturn" placeholder="ไม่บังคับ" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
+       <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">🕐 เวลากลับ (ถ้ากลับมา)</label> <input type="time" id="formTimeReturn" placeholder="ไม่บังคับ" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
        </div>
        <div class="grid grid-cols-2 gap-4">
-        <div><label class="block text-sm font-medium text-gray-700 mb-1">👤 ชื่อ-สกุลผู้ปกครอง</label> <input type="text" id="formParentName" placeholder="ชื่อผู้������ครอง" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
+        <div>
+         <label class="block text-sm font-medium text-gray-700 mb-1">👤 ชื่อ-สกุลผู้ปกครอง</label> <input type="text" id="formParentName" placeholder="ชื่อผู้������ครอง" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
         </div>
-        <div><label class="block text-sm font-medium text-gray-700 mb-1">📱 เบอร์โทรผู้ปกครอง</label> <input type="tel" id="formParentPhone" placeholder="0XX-XXX-XXXX" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
+        <div>
+         <label class="block text-sm font-medium text-gray-700 mb-1">📱 เบอร์โทรผู้ปกครอง</label> <input type="tel" id="formParentPhone" placeholder="0XX-XXX-XXXX" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all">
         </div>
        </div>
-       <div><label class="block text-sm font-medium text-gray-700 mb-1">📋 เหตุผลการลา</label> <select id="formReason" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all"> <option value="">-- เลือกเหตุผล --</option> <option value="ป่วย/พบแ��ทย์">🏥 ป่วย/พบแพทย์</option> <option value="ธุระครอบครัว">👨‍👩‍👧 ธุระครอบครัว</option> <option value="ดูแลผู้ป่วย">💊 ดูแลผู้ป่วย</option> <option value="ธุระด่วน">⚡ ธุระด่วน</option> <option value="อื่นๆ">📝 อื่นๆ (ระบุด้านล่าง)</option> </select>
+       <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">📋 เหตุผลการลา</label> <select id="formReason" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all"> <option value="">-- เลือกเหตุผล --</option> <option value="ป่วย/พบแ��ทย์">🏥 ป่วย/พบแพทย์</option> <option value="ธุระครอบครัว">👨‍👩‍👧 ธุระครอบครัว</option> <option value="ดูแลผู้ป่วย">💊 ดูแลผู้ป่วย</option> <option value="ธุระด่วน">⚡ ธุระด่วน</option> <option value="อื่นๆ">📝 อื่นๆ (ระบุด้านล่าง)</option> </select>
        </div>
-       <div><label class="block text-sm font-medium text-gray-700 mb-1">📝 รายละเอียดเพิ่มเติม</label> <textarea id="formReasonDetail" rows="2" placeholder="อธิบายเพิ่มเติม (ถ้ามี)" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all resize-none"></textarea>
+       <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">📝 รายละเอียดเพิ่มเติม</label> <textarea id="formReasonDetail" rows="2" placeholder="อธิบายเพิ่มเติม (ถ้ามี)" class="w-full px-4 py-3 border-2 border-purple-100 rounded-xl focus:border-purple-400 transition-all resize-none"></textarea>
        </div>
-       <div><label class="block text-sm font-medium text-gray-700 mb-2">📷 แนบรูปผู้ปกคร���งที่มารับ</label>
-        <div class="border-2 border-dashed border-purple-200 rounded-xl p-4 text-center hover:border-purple-400 transition-all"><input type="file" id="formImage" accept="image/*" class="hidden" onchange="handleImageUpload(event)">
-         <div id="imagePreview" class="hidden mb-3"><img id="previewImg" class="max-h-40 mx-auto rounded-xl shadow-lg">
+       <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">📷 แนบรูปผู้ปกคร���งที่มารับ</label>
+        <div class="border-2 border-dashed border-purple-200 rounded-xl p-4 text-center hover:border-purple-400 transition-all">
+         <input type="file" id="formImage" accept="image/*" class="hidden" onchange="handleImageUpload(event)">
+         <div id="imagePreview" class="hidden mb-3">
+          <img id="previewImg" class="max-h-40 mx-auto rounded-xl shadow-lg">
          </div><button type="button" onclick="document.getElementById('formImage').click()" class="px-6 py-3 bg-purple-100 text-purple-600 rounded-xl hover:bg-purple-200 transition-all font-medium"> 📸 เลือกรูปภาพ หรือ ถ่ายรูป </button>
          <p class="text-xs text-gray-400 mt-2">รองรับไฟล์ภาพ (จะบีบอัดอัตโนมัติ)</p>
         </div>
@@ -248,7 +274,8 @@
       <div id="submitMessage" class="mt-4 hidden"></div>
      </div><!-- History -->
      <div id="historySection" class="glass-card rounded-2xl p-6 cute-shadow hidden">
-      <div class="flex items-center gap-2 mb-6"><span class="text-3xl bounce-animation">📋</span>
+      <div class="flex items-center gap-2 mb-6">
+       <span class="text-3xl bounce-animation">📋</span>
        <h2 class="text-xl font-bold text-gray-800">ประวัติการขอลา</h2>
       </div>
       <div id="studentHistoryList" class="space-y-3">
@@ -263,7 +290,8 @@
     </div>
    </div><!-- Teacher Dashboard -->
    <div id="teacherDashboard" class="min-h-full w-full p-4 relative z-10 hidden">
-    <div class="max-w-6xl mx-auto"><!-- Header -->
+    <div class="max-w-6xl mx-auto">
+     <!-- Header -->
      <div class="glass-card rounded-2xl p-4 mb-4 cute-shadow">
       <div class="flex items-center justify-between flex-wrap gap-4">
        <div class="flex items-center gap-3">
@@ -276,7 +304,8 @@
         </div>
        </div>
        <div class="flex items-center gap-3">
-        <div id="notificationBell" class="relative cursor-pointer p-2 hover:bg-gray-100 rounded-full transition-all"><span class="text-2xl">🔔</span> <span id="notificationCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold hidden">0</span>
+        <div id="notificationBell" class="relative cursor-pointer p-2 hover:bg-gray-100 rounded-full transition-all">
+         <span class="text-2xl">🔔</span> <span id="notificationCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold hidden">0</span>
         </div><button onclick="logout()" class="px-4 py-2 bg-red-100 text-red-600 rounded-xl hover:bg-red-200 transition-all text-sm font-medium"> 🚪 ออกจากระบบ </button>
        </div>
       </div>
@@ -328,11 +357,13 @@
       </div>
      </div><!-- Teacher Tabs -->
      <div class="glass-card rounded-2xl p-2 mb-4 cute-shadow">
-      <div class="flex gap-2 flex-wrap"><button onclick="showTeacherTab('pending')" id="teacherTabPending" class="flex-1 py-3 px-4 rounded-xl font-medium transition-all bg-gradient-to-r from-green-500 to-teal-500 text-white min-w-fit"> ⏳ ตรวจสอบคำขอ </button> <button onclick="showTeacherTab('all')" id="teacherTabAll" class="flex-1 py-3 px-4 rounded-xl font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200 min-w-fit"> 📋 รายการทั้งหมด </button> <button onclick="showTeacherTab('search')" id="teacherTabSearch" class="flex-1 py-3 px-4 rounded-xl font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200 min-w-fit"> 🔍 ค้นหา </button>
+      <div class="flex gap-2 flex-wrap">
+       <button onclick="showTeacherTab('pending')" id="teacherTabPending" class="flex-1 py-3 px-4 rounded-xl font-medium transition-all bg-gradient-to-r from-green-500 to-teal-500 text-white min-w-fit"> ⏳ ตรวจสอบคำขอ </button> <button onclick="showTeacherTab('all')" id="teacherTabAll" class="flex-1 py-3 px-4 rounded-xl font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200 min-w-fit"> 📋 รายการทั้งหมด </button> <button onclick="showTeacherTab('search')" id="teacherTabSearch" class="flex-1 py-3 px-4 rounded-xl font-medium transition-all bg-gray-100 text-gray-600 hover:bg-gray-200 min-w-fit"> 🔍 ค้นหา </button>
       </div>
      </div><!-- Pending Requests -->
      <div id="pendingSection" class="glass-card rounded-2xl p-6 cute-shadow">
-      <div class="flex items-center gap-2 mb-6"><span class="text-3xl wiggle-animation">⏳</span>
+      <div class="flex items-center gap-2 mb-6">
+       <span class="text-3xl wiggle-animation">⏳</span>
        <h2 class="text-xl font-bold text-gray-800">คำขอรอดำเนินการ</h2>
       </div>
       <div id="pendingList" class="space-y-4">
@@ -345,7 +376,8 @@
       </div>
      </div><!-- All Records -->
      <div id="allSection" class="glass-card rounded-2xl p-6 cute-shadow hidden">
-      <div class="flex items-center gap-2 mb-6"><span class="text-3xl bounce-animation">📋</span>
+      <div class="flex items-center gap-2 mb-6">
+       <span class="text-3xl bounce-animation">📋</span>
        <h2 class="text-xl font-bold text-gray-800">รายการทั้งหม��</h2>
       </div>
       <div id="allList" class="space-y-4">
@@ -358,10 +390,12 @@
       </div>
      </div><!-- Search Section -->
      <div id="searchSection" class="glass-card rounded-2xl p-6 cute-shadow hidden">
-      <div class="flex items-center gap-2 mb-6"><span class="text-3xl bounce-animation">🔍</span>
+      <div class="flex items-center gap-2 mb-6">
+       <span class="text-3xl bounce-animation">🔍</span>
        <h2 class="text-xl font-bold text-gray-800">ค้นหาข้อมูล</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6"><input type="text" id="searchName" placeholder="🔍 ค้นหาชื่อ/รหัสนักเรียน" class="px-4 py-3 border-2 border-green-100 rounded-xl focus:border-green-400 transition-all" oninput="performSearch()"> <input type="date" id="searchDate" class="px-4 py-3 border-2 border-green-100 rounded-xl focus:border-green-400 transition-all" onchange="performSearch()"> <select id="searchStatus" class="px-4 py-3 border-2 border-green-100 rounded-xl focus:border-green-400 transition-all" onchange="performSearch()"> <option value="">-- ท��กสถานะ --</option> <option value="pending">⏳ รอดำเนินการ</option> <option value="approved">✅ อนุมัติแล้ว</option> <option value="rejected">❌ ไม่อนุมัติ</option> </select>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+       <input type="text" id="searchName" placeholder="🔍 ค้นหาชื่อ/รหัสนักเรียน" class="px-4 py-3 border-2 border-green-100 rounded-xl focus:border-green-400 transition-all" oninput="performSearch()"> <input type="date" id="searchDate" class="px-4 py-3 border-2 border-green-100 rounded-xl focus:border-green-400 transition-all" onchange="performSearch()"> <select id="searchStatus" class="px-4 py-3 border-2 border-green-100 rounded-xl focus:border-green-400 transition-all" onchange="performSearch()"> <option value="">-- ท��กสถานะ --</option> <option value="pending">⏳ รอดำเนินการ</option> <option value="approved">✅ อนุมัติแล้ว</option> <option value="rejected">❌ ไม่อนุมัติ</option> </select>
       </div>
       <div id="searchResults" class="space-y-4">
        <div class="text-center py-8 text-gray-400">
@@ -382,21 +416,25 @@
       </div>
       <h3 class="text-xl font-bold text-gray-800">��ม่อนุมัติคำขอ</h3>
      </div>
-     <div class="mb-4"><label class="block text-sm font-medium text-gray-700 mb-2">📝 หมายเ��ตุการไม่อนุมัติ</label> <textarea id="rejectNote" rows="3" placeholder="กรุณาระบุเหตุผล..." class="w-full px-4 py-3 border-2 border-red-100 rounded-xl focus:border-red-400 transition-all resize-none"></textarea>
+     <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-700 mb-2">📝 หมายเ��ตุการไม่อนุมัติ</label> <textarea id="rejectNote" rows="3" placeholder="กรุณาระบุเหตุผล..." class="w-full px-4 py-3 border-2 border-red-100 rounded-xl focus:border-red-400 transition-all resize-none"></textarea>
      </div>
-     <div class="flex gap-3"><button onclick="closeRejectModal()" class="flex-1 py-3 bg-gray-100 text-gray-600 rounded-xl font-medium hover:bg-gray-200 transition-all"> ยกเลิก </button> <button onclick="confirmReject()" class="flex-1 py-3 bg-red-500 text-white rounded-xl font-medium hover:bg-red-600 transition-all"> ❌ ยืนยันไม่อนุมัติ </button>
+     <div class="flex gap-3">
+      <button onclick="closeRejectModal()" class="flex-1 py-3 bg-gray-100 text-gray-600 rounded-xl font-medium hover:bg-gray-200 transition-all"> ยกเลิก </button> <button onclick="confirmReject()" class="flex-1 py-3 bg-red-500 text-white rounded-xl font-medium hover:bg-red-600 transition-all"> ❌ ยืนยันไม่อนุมัติ </button>
      </div>
     </div>
    </div><!-- Image Modal -->
    <div id="imageModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden p-4" onclick="closeImageModal()">
-    <div class="max-w-2xl max-h-[80%] overflow-hidden"><img id="modalImage" class="max-w-full max-h-full rounded-xl shadow-2xl">
+    <div class="max-w-2xl max-h-[80%] overflow-hidden">
+     <img id="modalImage" class="max-w-full max-h-full rounded-xl shadow-2xl">
     </div>
    </div><!-- Notification Toast -->
    <div id="toast" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-4 rounded-xl shadow-lg z-50 hidden transform translate-x-full transition-transform">
-    <div class="flex items-center gap-3"><span class="text-2xl">🔔</span>
+    <div class="flex items-center gap-3">
+     <span class="text-2xl">🔔</span>
      <div>
       <p class="font-semibold" id="toastTitle">แจ้งเตือน</p>
-      <p class="text-sm opacity-90" id="toastMessage">มีคำขอใหม่</p>
+      <p class="text-sm opacity-90" id="toastMessage">มีคำขอให���่</p>
      </div>
     </div>
    </div>
@@ -560,57 +598,86 @@
     
     // Student login
     function studentLogin() {
-      const studentIdInput = document.getElementById('studentIdInput');
-      const nationalIdInput = document.getElementById('nationalIdInput');
-      const errorEl = document.getElementById('loginError');
-      
-      const studentId = studentIdInput.value.trim();
-      const nationalId = nationalIdInput.value.trim();
-      
-      if (!studentId || !nationalId || nationalId.length !== 4) {
-        errorEl.textContent = '❌ กรุณากรอกเลขประจำตัวและเลขประชาชน 4 ตัวท้าย';
-        errorEl.classList.remove('hidden');
-        return;
+      try {
+        const studentIdInput = document.getElementById('studentIdInput');
+        const nationalIdInput = document.getElementById('nationalIdInput');
+        const errorEl = document.getElementById('loginError');
+        
+        if (!studentIdInput || !nationalIdInput) {
+          console.error('Input elements not found');
+          return;
+        }
+        
+        const studentId = studentIdInput.value.trim();
+        const nationalId = nationalIdInput.value.trim();
+        
+        if (!studentId || !nationalId || nationalId.length !== 4) {
+          if (errorEl) {
+            errorEl.textContent = '❌ กรุณากรอกเลขประจำตัวและเลขประชาชน 4 ตัวท้าย';
+            errorEl.classList.remove('hidden');
+          }
+          return;
+        }
+        
+        currentUser = { studentId, nationalId };
+        userType = 'student';
+        
+        const loginPageEl = document.getElementById('loginPage');
+        const dashboardEl = document.getElementById('studentDashboard');
+        
+        if (loginPageEl && dashboardEl) {
+          loginPageEl.classList.add('hidden');
+          dashboardEl.classList.remove('hidden');
+        }
+        
+        const welcomeEl = document.getElementById('welcomeStudent');
+        const idEl = document.getElementById('studentIdDisplay');
+        
+        if (welcomeEl) welcomeEl.textContent = `ยินดีต้อนรับ นักเรียน`;
+        if (idEl) idEl.textContent = `รหัส: ${studentId}`;
+        
+        updateUI();
+      } catch (e) {
+        console.error('Student login error:', e);
       }
-      
-      currentUser = { studentId, nationalId };
-      userType = 'student';
-      
-      const loginPageEl = document.getElementById('loginPage');
-      const dashboardEl = document.getElementById('studentDashboard');
-      
-      loginPageEl.classList.add('hidden');
-      dashboardEl.classList.remove('hidden');
-      
-      const welcomeEl = document.getElementById('welcomeStudent');
-      const idEl = document.getElementById('studentIdDisplay');
-      
-      welcomeEl.textContent = `ยินดีต้อนรับ นักเรียน`;
-      idEl.textContent = `รหัส: ${studentId}`;
-      
-      updateUI();
     }
     
     // Teacher login
     function teacherLogin() {
-      const username = document.getElementById('teacherUsername').value.trim();
-      const password = document.getElementById('teacherPassword').value.trim();
-      const errorEl = document.getElementById('teacherLoginError');
-      
-      if (username === 'admin' && password === '1234') {
-        currentUser = { username };
-        userType = 'teacher';
-        lastPendingCount = allRecords.filter(r => r.status === 'pending').length;
+      try {
+        const usernameInput = document.getElementById('teacherUsername');
+        const passwordInput = document.getElementById('teacherPassword');
+        const errorEl = document.getElementById('teacherLoginError');
         
-        const teacherLoginEl = document.getElementById('teacherLoginPage');
-        const teacherDashEl = document.getElementById('teacherDashboard');
+        if (!usernameInput || !passwordInput) {
+          console.error('Login input elements not found');
+          return;
+        }
         
-        teacherLoginEl.classList.add('hidden');
-        teacherDashEl.classList.remove('hidden');
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value.trim();
         
-        updateUI();
-      } else {
-        errorEl.classList.remove('hidden');
+        if (username === 'admin' && password === '1234') {
+          currentUser = { username };
+          userType = 'teacher';
+          lastPendingCount = allRecords.filter(r => r.status === 'pending').length;
+          
+          const teacherLoginEl = document.getElementById('teacherLoginPage');
+          const teacherDashEl = document.getElementById('teacherDashboard');
+          
+          if (teacherLoginEl && teacherDashEl) {
+            teacherLoginEl.classList.add('hidden');
+            teacherDashEl.classList.remove('hidden');
+          }
+          
+          updateUI();
+        } else {
+          if (errorEl) {
+            errorEl.classList.remove('hidden');
+          }
+        }
+      } catch (e) {
+        console.error('Teacher login error:', e);
       }
     }
     
@@ -1084,7 +1151,7 @@
     function getStatusText(status) {
       switch (status) {
         case 'pending': return '⏳ รอดำเนินการ';
-        case 'approved': return '✅ อนุมัติแล้ว';
+        case 'approved': return '✅ อนุมัต���แล้ว';
         case 'rejected': return '❌ ไม่อนุมัติ';
         default: return status;
       }
@@ -1112,5 +1179,5 @@
     // Initialize on load
     initApp();
   </script>
- </body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cba6c5261662739',t:'MTc3MDcxNDA5OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
